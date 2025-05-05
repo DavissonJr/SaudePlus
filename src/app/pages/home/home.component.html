@@ -1,7 +1,8 @@
-<section>
-  <h3 class="text-primary-emphasis text-center">Encontre ajuda em:</h3>
-  <!-- carrosel -->
-  <div id="carouselExample" class="carousel slide">
+<section class="py-5">
+  <h3 class="text-primary-emphasis text-center mb-4">Encontre ajuda em:</h3>
+
+  <!-- Carrossel -->
+  <div id="carouselExample" class="carousel slide" data-bs-ride="carousel">
     <div class="carousel-inner">
       <div class="carousel-item active">
         <img
@@ -29,6 +30,7 @@
       </div>
     </div>
 
+    <!-- Controles do carrossel -->
     <div
       class="carousel-control-prev"
       style="
@@ -40,12 +42,15 @@
       "
     >
       <button
-        class="btn"
+        class="btn btn-dark"
         type="button"
         data-bs-target="#carouselExample"
         data-bs-slide="prev"
       >
-        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span
+          class="carousel-control-prev-icon text-white"
+          aria-hidden="true"
+        ></span>
         <span class="visually-hidden">Previous</span>
       </button>
     </div>
@@ -61,15 +66,18 @@
       "
     >
       <button
-        class="btn"
+        class="btn btn-dark"
         type="button"
         data-bs-target="#carouselExample"
         data-bs-slide="next"
       >
-        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span
+          class="carousel-control-next-icon text-white"
+          aria-hidden="true"
+        ></span>
         <span class="visually-hidden">Next</span>
       </button>
     </div>
   </div>
-  <!-- end carrosel -->
+  <!-- Fim do carrossel -->
 </section>
