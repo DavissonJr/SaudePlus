@@ -3,6 +3,7 @@ import { HomeComponent } from './pages/home/home.component';
 import { AgendarConsultaComponent } from './pages/agendar-consultas/agendar-consultas.component';
 import { ServicosComponent } from './pages/servicos/servicos.component';
 import { ProfissionaisComponent } from './pages/profissionais/profissionais.component';
+import { RecursosComponent } from './pages/recursos/recursos.component';
 
 export const routes: Routes = [
   {
@@ -25,5 +26,9 @@ export const routes: Routes = [
   {
     path: 'profissionais',
     component: ProfissionaisComponent,
+  },
+  {
+    path: 'recursos',
+    component: RecursosComponent,
   },
 ];
