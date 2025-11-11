@@ -1,0 +1,310 @@
+<section class="py-5 position-relative overflow-hidden">
+  <!-- Background com gradiente suave -->
+  <div
+    class="position-absolute top-0 start-0 w-100 h-100"
+    style="
+      background: linear-gradient(
+        135deg,
+        #fff8f8 0%,
+        #f8f8ff 50%,
+        #f8fff8 100%
+      );
+      z-index: -1;
+    "
+  ></div>
+
+  <!-- Elementos decorativos -->
+  <div class="position-absolute top-0 start-0" style="z-index: -1">
+    <div
+      class="bg-primary bg-opacity-5 rounded-circle"
+      style="width: 300px; height: 300px; transform: translate(-150px, -150px)"
+    ></div>
+  </div>
+
+  <div class="container position-relative">
+    <!-- Header -->
+    <div class="text-center mb-5">
+      <div
+        class="bg-primary bg-opacity-10 rounded-circle d-inline-flex align-items-center justify-content-center mb-4"
+        style="width: 80px; height: 80px"
+      >
+        <i class="bi bi-people fs-2 text-primary"></i>
+      </div>
+      <h2 class="text-primary fw-bold display-5 mb-3">Nossa Equipe</h2>
+      <p class="text-muted fs-5 mx-auto" style="max-width: 600px">
+        Conheça nossos profissionais qualificados e especializados em saúde
+        mental
+      </p>
+    </div>
+
+    <!-- Filtros -->
+    <div class="row mb-5">
+      <div class="col-12">
+        <div class="card border-0 shadow-sm rounded-4">
+          <div class="card-body p-4">
+            <div class="row align-items-center">
+              <div class="col-md-8">
+                <h5 class="text-dark mb-3">Filtrar por especialidade:</h5>
+                <div class="d-flex flex-wrap gap-2">
+                  <button class="btn btn-outline-primary btn-sm active">
+                    Todos
+                  </button>
+                  <button class="btn btn-outline-primary btn-sm">
+                    Psicologia
+                  </button>
+                  <button class="btn btn-outline-primary btn-sm">
+                    Psiquiatria
+                  </button>
+                  <button class="btn btn-outline-primary btn-sm">
+                    Terapia
+                  </button>
+                  <button class="btn btn-outline-primary btn-sm">
+                    Neuropsicologia
+                  </button>
+                </div>
+              </div>
+              <div class="col-md-4 text-md-end mt-3 mt-md-0">
+                <div class="input-group">
+                  <span class="input-group-text bg-light border-end-0">
+                    <i class="bi bi-search text-muted"></i>
+                  </span>
+                  <input
+                    type="text"
+                    class="form-control border-start-0"
+                    placeholder="Buscar profissional..."
+                  />
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Grid de Profissionais -->
+    <div class="row g-4">
+      <!-- Psicóloga 1 -->
+      <div class="col-lg-4 col-md-6">
+        <div class="card professional-card border-0 shadow-lg rounded-4 h-100">
+          <div class="card-body p-4 text-center">
+            <!-- Avatar -->
+            <div class="position-relative mb-4">
+              <div class="professional-avatar mx-auto">
+                <img
+                  src="https://images.unsplash.com/photo-1559839734-2b71ea197ec2?ixlib=rb-4.0.3&auto=format&fit=crop&w=300&q=80"
+                  alt="Dra. Maria Silva"
+                  class="rounded-circle img-fluid"
+                />
+              </div>
+            </div>
+
+            <!-- Informações -->
+            <h5 class="text-primary fw-bold mb-2">Dra. Maria Silva</h5>
+            <p class="text-muted mb-3">Psicóloga Clínica - CRP 05/12345</p>
+
+            <!-- Especialidades -->
+            <div class="d-flex flex-wrap justify-content-center gap-2 mb-4">
+              <span class="badge bg-primary bg-opacity-10 text-primary"
+                >TCC</span
+              >
+              <span class="badge bg-primary bg-opacity-10 text-primary"
+                >Ansiedade</span
+              >
+              <span class="badge bg-primary bg-opacity-10 text-primary"
+                >Depressão</span
+              >
+            </div>
+
+            <!-- Descrição -->
+            <p class="text-muted small mb-4">
+              Especialista em Terapia Cognitivo-Comportamental com 8 anos de
+              experiência. Atendimento humanizado e focado em resultados.
+            </p>
+
+            <!-- Estatísticas -->
+            <div class="row text-center mb-4">
+              <div class="col-4">
+                <div class="text-primary fw-bold">500+</div>
+                <small class="text-muted">Pacientes</small>
+              </div>
+              <div class="col-4">
+                <div class="text-primary fw-bold">4.9</div>
+                <small class="text-muted">Avaliação</small>
+              </div>
+              <div class="col-4">
+                <div class="text-primary fw-bold">8 anos</div>
+                <small class="text-muted">Experiência</small>
+              </div>
+            </div>
+
+            <!-- Botões -->
+            <div class="d-grid gap-2">
+              <button class="btn btn-primary btn-lg">
+                <i class="bi bi-calendar-check me-2"></i>
+                Agendar Consulta
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Psiquiatra -->
+      <div class="col-lg-4 col-md-6">
+        <div class="card professional-card border-0 shadow-lg rounded-4 h-100">
+          <div class="card-body p-4 text-center">
+            <!-- Avatar -->
+            <div class="position-relative mb-4">
+              <div class="professional-avatar mx-auto">
+                <img
+                  src="https://images.unsplash.com/photo-1612349317150-e413f6a5b16d?ixlib=rb-4.0.3&auto=format&fit=crop&w=300&q=80"
+                  alt="Dr. João Santos"
+                  class="rounded-circle img-fluid"
+                />
+              </div>
+            </div>
+
+            <!-- Informações -->
+            <h5 class="text-primary fw-bold mb-2">Dr. João Santos</h5>
+            <p class="text-muted mb-3">Psiquiatra - CRM 123456/SP</p>
+
+            <!-- Especialidades -->
+            <div class="d-flex flex-wrap justify-content-center gap-2 mb-4">
+              <span class="badge bg-success bg-opacity-10 text-success"
+                >Adultos</span
+              >
+              <span class="badge bg-success bg-opacity-10 text-success"
+                >TDAH</span
+              >
+              <span class="badge bg-success bg-opacity-10 text-success"
+                >Ansiedade</span
+              >
+            </div>
+
+            <!-- Descrição -->
+            <p class="text-muted small mb-4">
+              Psiquiatra com especialização em saúde mental adulta. Abordagem
+              integrativa entre terapia e medicação quando necessário.
+            </p>
+
+            <!-- Estatísticas -->
+            <div class="row text-center mb-4">
+              <div class="col-4">
+                <div class="text-success fw-bold">300+</div>
+                <small class="text-muted">Pacientes</small>
+              </div>
+              <div class="col-4">
+                <div class="text-success fw-bold">4.8</div>
+                <small class="text-muted">Avaliação</small>
+              </div>
+              <div class="col-4">
+                <div class="text-success fw-bold">6 anos</div>
+                <small class="text-muted">Experiência</small>
+              </div>
+            </div>
+
+            <!-- Botões -->
+            <div class="d-grid gap-2">
+              <button class="btn btn-success btn-lg">
+                <i class="bi bi-calendar-check me-2"></i>
+                Agendar Consulta
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Psicóloga 2 -->
+      <div class="col-lg-4 col-md-6">
+        <div class="card professional-card border-0 shadow-lg rounded-4 h-100">
+          <div class="card-body p-4 text-center">
+            <!-- Avatar -->
+            <div class="position-relative mb-4">
+              <div class="professional-avatar mx-auto">
+                <img
+                  src="https://img.freepik.com/fotos-gratis/mulher-de-tiro-medio-trabalhando-como-medica_23-2150379198.jpg?semt=ais_hybrid&w=740&q=80"
+                  alt="Dra. Ana Costa"
+                  class="rounded-circle img-fluid"
+                />
+              </div>
+            </div>
+
+            <!-- Informações -->
+            <h5 class="text-primary fw-bold mb-2">Dra. Ana Costa</h5>
+            <p class="text-muted mb-3">Psicóloga - CRP 05/67890</p>
+
+            <!-- Especialidades -->
+            <div class="d-flex flex-wrap justify-content-center gap-2 mb-4">
+              <span class="badge bg-info bg-opacity-10 text-info">Casais</span>
+              <span class="badge bg-info bg-opacity-10 text-info"
+                >Familiar</span
+              >
+              <span class="badge bg-info bg-opacity-10 text-info"
+                >Relacionamentos</span
+              >
+            </div>
+
+            <!-- Descrição -->
+            <p class="text-muted small mb-4">
+              Especialista em terapia de casal e familiar. Foco em comunicação,
+              resolução de conflitos e fortalecimento de vínculos.
+            </p>
+
+            <!-- Estatísticas -->
+            <div class="row text-center mb-4">
+              <div class="col-4">
+                <div class="text-info fw-bold">200+</div>
+                <small class="text-muted">Casais</small>
+              </div>
+              <div class="col-4">
+                <div class="text-info fw-bold">4.9</div>
+                <small class="text-muted">Avaliação</small>
+              </div>
+              <div class="col-4">
+                <div class="text-info fw-bold">5 anos</div>
+                <small class="text-muted">Experiência</small>
+              </div>
+            </div>
+
+            <!-- Botões -->
+            <div class="d-grid gap-2">
+              <button class="btn btn-info btn-lg">
+                <i class="bi bi-calendar-check me-2"></i>
+                Agendar Consulta
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Mais Profissionais -->
+    <div class="row mt-5">
+      <div class="col-12 text-center">
+        <div class="card border-0 bg-light rounded-4">
+          <div class="card-body p-5">
+            <h4 class="text-dark fw-bold mb-3">
+              Não encontrou o profissional ideal?
+            </h4>
+            <p class="text-muted mb-4">
+              Temos uma equipe completa de especialistas. Entre em contato para
+              ajudarmos a encontrar o profissional perfeito para suas
+              necessidades.
+            </p>
+            <div
+              class="d-flex flex-column flex-sm-row justify-content-center gap-3"
+            >
+              <button class="btn btn-primary btn-lg px-4">
+                <i class="bi bi-telephone me-2"></i>
+                Falar com Nossa Equipe
+              </button>
+              <button class="btn btn-outline-primary btn-lg px-4">
+                <i class="bi bi-whatsapp me-2"></i>
+                WhatsApp
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
