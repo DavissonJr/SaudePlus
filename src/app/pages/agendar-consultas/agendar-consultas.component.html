@@ -1,0 +1,374 @@
+<section class="py-5 position-relative overflow-hidden">
+  <!-- Background moderno -->
+  <div
+    class="position-absolute top-0 start-0 w-100 h-100"
+    style="
+      background: linear-gradient(
+        135deg,
+        #f8f9ff 0%,
+        #f0f4ff 50%,
+        #e8f0ff 100%
+      );
+      z-index: -1;
+    "
+  ></div>
+
+  <!-- Elementos decorativos -->
+  <div class="position-absolute top-0 end-0" style="z-index: -1">
+    <div
+      class="bg-primary bg-opacity-10 rounded-circle"
+      style="width: 300px; height: 300px; transform: translate(150px, -150px)"
+    ></div>
+  </div>
+
+  <div class="container position-relative">
+    <div class="row justify-content-center">
+      <div class="col-lg-11">
+        <!-- Header modernizado -->
+        <div class="text-center mb-5">
+          <div
+            class="bg-primary bg-opacity-10 rounded-circle d-inline-flex align-items-center justify-content-center mb-4"
+            style="width: 80px; height: 80px"
+          >
+            <i class="bi bi-calendar2-check fs-2 text-primary"></i>
+          </div>
+          <h2 class="text-primary fw-bold display-5 mb-3">
+            Agende Sua Consulta
+          </h2>
+          <p class="text-muted fs-5">
+            Escolha a forma de contato que preferir - estamos aqui para ajudar
+          </p>
+        </div>
+
+        <div class="row g-4">
+          <!-- Formulário de Agendamento - Lado Esquerdo -->
+          <div class="col-lg-8">
+            <div class="card border-0 shadow-lg rounded-4 h-100">
+              <div class="card-header bg-transparent border-0 pt-4">
+                <div class="d-flex align-items-center">
+                  <div
+                    class="bg-primary bg-opacity-10 rounded-circle d-flex align-items-center justify-content-center me-3"
+                    style="width: 50px; height: 50px"
+                  >
+                    <i class="bi bi-pencil-square text-primary fs-5"></i>
+                  </div>
+                  <div>
+                    <h4 class="text-primary fw-bold mb-1">
+                      Formulário de Agendamento
+                    </h4>
+                    <p class="text-muted mb-0">Preencha os dados abaixo</p>
+                  </div>
+                </div>
+              </div>
+              <div class="card-body p-4 p-md-5">
+                <form [formGroup]="consultaForm" (ngSubmit)="onSubmit()">
+                  <div class="row g-4">
+                    <!-- Nome Completo -->
+                    <div class="col-md-6">
+                      <label for="nome" class="form-label fw-semibold text-dark"
+                        >Nome Completo *</label
+                      >
+                      <div class="input-group input-group-lg">
+                        <span class="input-group-text bg-light border-end-0">
+                          <i class="bi bi-person text-muted"></i>
+                        </span>
+                        <input
+                          type="text"
+                          class="form-control border-start-0 ps-2"
+                          id="nome"
+                          formControlName="nome"
+                          placeholder="Seu nome completo"
+                        />
+                      </div>
+                    </div>
+
+                    <!-- Email -->
+                    <div class="col-md-6">
+                      <label
+                        for="email"
+                        class="form-label fw-semibold text-dark"
+                        >E-mail *</label
+                      >
+                      <div class="input-group input-group-lg">
+                        <span class="input-group-text bg-light border-end-0">
+                          <i class="bi bi-envelope text-muted"></i>
+                        </span>
+                        <input
+                          type="email"
+                          class="form-control border-start-0 ps-2"
+                          id="email"
+                          formControlName="email"
+                          placeholder="seu@email.com"
+                        />
+                      </div>
+                    </div>
+
+                    <!-- Telefone -->
+                    <div class="col-md-6">
+                      <label
+                        for="telefone"
+                        class="form-label fw-semibold text-dark"
+                        >Telefone *</label
+                      >
+                      <div class="input-group input-group-lg">
+                        <span class="input-group-text bg-light border-end-0">
+                          <i class="bi bi-phone text-muted"></i>
+                        </span>
+                        <input
+                          type="tel"
+                          class="form-control border-start-0 ps-2"
+                          id="telefone"
+                          formControlName="telefone"
+                          placeholder="(11) 99999-9999"
+                        />
+                      </div>
+                    </div>
+
+                    <!-- Tipo de Consulta -->
+                    <div class="col-md-6">
+                      <label
+                        for="tipoConsulta"
+                        class="form-label fw-semibold text-dark"
+                        >Tipo de Consulta *</label
+                      >
+                      <div class="input-group input-group-lg">
+                        <span class="input-group-text bg-light border-end-0">
+                          <i class="bi bi-clipboard-plus text-muted"></i>
+                        </span>
+                        <select
+                          class="form-select border-start-0 ps-2"
+                          id="tipoConsulta"
+                          formControlName="tipoConsulta"
+                        >
+                          <option value="">Selecione...</option>
+                          <option value="primeira-vez">
+                            Primeira Consulta
+                          </option>
+                          <option value="retorno">Consulta de Retorno</option>
+                          <option value="emergencia">
+                            Atendimento de Emergência
+                          </option>
+                          <option value="grupo">Grupo de Apoio</option>
+                        </select>
+                      </div>
+                    </div>
+
+                    <!-- Preferência de Horário -->
+                    <div class="col-md-6">
+                      <label
+                        for="preferenciaHorario"
+                        class="form-label fw-semibold text-dark"
+                        >Preferência de Horário</label
+                      >
+                      <div class="input-group input-group-lg">
+                        <span class="input-group-text bg-light border-end-0">
+                          <i class="bi bi-clock text-muted"></i>
+                        </span>
+                        <select
+                          class="form-select border-start-0 ps-2"
+                          id="preferenciaHorario"
+                          formControlName="preferenciaHorario"
+                        >
+                          <option value="">Qualquer horário</option>
+                          <option value="manha">Manhã (8h-12h)</option>
+                          <option value="tarde">Tarde (13h-18h)</option>
+                          <option value="noite">Noite (18h-21h)</option>
+                        </select>
+                      </div>
+                    </div>
+
+                    <!-- Modalidade -->
+                    <div class="col-md-6">
+                      <label class="form-label fw-semibold text-dark"
+                        >Modalidade Preferida</label
+                      >
+                      <div class="card bg-light border-0 p-3">
+                        <div class="row g-2">
+                          <div class="col-6">
+                            <div
+                              class="form-check card-option p-3 rounded-3"
+                              [class.border-primary]="
+                                consultaForm.get('modalidade')?.value ===
+                                'online'
+                              "
+                            >
+                              <input
+                                class="form-check-input"
+                                type="radio"
+                                id="online"
+                                value="online"
+                                formControlName="modalidade"
+                              />
+                              <label
+                                class="form-check-label d-block text-center"
+                                for="online"
+                              >
+                                <i
+                                  class="bi bi-camera-video fs-4 d-block mb-2"
+                                ></i>
+                                Online
+                              </label>
+                            </div>
+                          </div>
+                          <div class="col-6">
+                            <div
+                              class="form-check card-option p-3 rounded-3"
+                              [class.border-primary]="
+                                consultaForm.get('modalidade')?.value ===
+                                'presencial'
+                              "
+                            >
+                              <input
+                                class="form-check-input"
+                                type="radio"
+                                id="presencial"
+                                value="presencial"
+                                formControlName="modalidade"
+                              />
+                              <label
+                                class="form-check-label d-block text-center"
+                                for="presencial"
+                              >
+                                <i class="bi bi-geo-alt fs-4 d-block mb-2"></i>
+                                Presencial
+                              </label>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+                    <!-- Mensagem -->
+                    <div class="col-12">
+                      <label
+                        for="mensagem"
+                        class="form-label fw-semibold text-dark"
+                        >Mensagem (Opcional)</label
+                      >
+                      <div class="input-group input-group-lg">
+                        <span
+                          class="input-group-text bg-light border-end-0 align-items-start pt-3"
+                        >
+                          <i class="bi bi-chat-left-text text-muted"></i>
+                        </span>
+                        <textarea
+                          class="form-control border-start-0 ps-2"
+                          id="mensagem"
+                          rows="4"
+                          formControlName="mensagem"
+                          placeholder="Conte-nos um pouco sobre o que você gostaria de trabalhar na terapia..."
+                        ></textarea>
+                      </div>
+                    </div>
+
+                    <!-- Botão Enviar -->
+                    <div class="col-12 pt-3">
+                      <button
+                        type="submit"
+                        class="btn btn-primary btn-lg w-100 py-3 fw-semibold fs-5"
+                        [disabled]="!consultaForm.valid"
+                      >
+                        <i class="bi bi-send me-2"></i>
+                        Enviar Solicitação de Agendamento
+                      </button>
+                    </div>
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
+
+          <!-- Opção WhatsApp - Lado Direito -->
+          <div class="col-lg-4">
+            <div
+              class="card border-0 shadow-lg rounded-4 h-100 bg-gradient-whatsapp"
+            >
+              <div class="card-body p-4 p-md-5 text-center d-flex flex-column">
+                <div class="mb-4">
+                  <div
+                    class="bg-white rounded-circle d-inline-flex align-items-center justify-content-center mb-4 shadow-sm"
+                    style="width: 100px; height: 100px"
+                  >
+                    <i class="bi bi-whatsapp fs-1 text-success"></i>
+                  </div>
+                  <h4 class="text-dark fw-bold mb-3">Agendar por WhatsApp</h4>
+                  <p class="text-muted mb-4">
+                    Conversa direta e rápida com nossa equipe. Ideal para
+                    dúvidas imediatas e agendamentos express.
+                  </p>
+
+                  <!-- Vantagens -->
+                  <div class="text-start">
+                    <div class="d-flex align-items-center mb-3">
+                      <i class="bi bi-check-circle-fill text-success me-2"></i>
+                      <small class="text-muted"
+                        >Resposta em até 5 minutos</small
+                      >
+                    </div>
+                    <div class="d-flex align-items-center mb-3">
+                      <i class="bi bi-check-circle-fill text-success me-2"></i>
+                      <small class="text-muted">Atendimento humanizado</small>
+                    </div>
+                    <div class="d-flex align-items-center">
+                      <i class="bi bi-check-circle-fill text-success me-2"></i>
+                      <small class="text-muted">Confirmação imediata</small>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="mt-auto">
+                  <a
+                    href="https://wa.me/5511999999999?text=Olá! Gostaria de agendar uma consulta de saúde mental."
+                    target="_blank"
+                    class="btn btn-success btn-lg w-100 py-3 fw-semibold fs-5 shadow"
+                  >
+                    <i class="bi bi-whatsapp me-2"></i>
+                    Conversar no WhatsApp
+                  </a>
+
+                  <div class="mt-4 p-3 bg-white rounded-3">
+                    <div
+                      class="d-flex align-items-center justify-content-center"
+                    >
+                      <i class="bi bi-clock text-muted me-2"></i>
+                      <small class="text-muted fw-semibold"
+                        >Atendimento: Seg-Sex, 8h-20h</small
+                      >
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Informações Adicionais -->
+        <div class="row mt-5">
+          <div class="col-12">
+            <div class="alert alert-primary border-0 rounded-4 shadow-sm">
+              <div class="d-flex align-items-center">
+                <div
+                  class="bg-white bg-opacity-50 rounded-circle d-flex align-items-center justify-content-center me-4"
+                  style="width: 60px; height: 60px"
+                >
+                  <i class="bi bi-info-circle fs-4 text-primary"></i>
+                </div>
+                <div class="flex-grow-1">
+                  <h6 class="alert-heading mb-2 text-dark fw-bold">
+                    Processo de Agendamento
+                  </h6>
+                  <p class="mb-0 text-dark">
+                    Após o envio do formulário, nossa equipe entrará em contato
+                    em até <strong>24 horas úteis</strong>
+                    para confirmar todos os detalhes. Para emergências, utilize
+                    o WhatsApp para atendimento imediato.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
