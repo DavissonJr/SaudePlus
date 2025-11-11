@@ -1,6 +1,6 @@
 <nav class="navbar navbar-expand-lg navbar-light bg-white shadow-sm sticky-top">
   <div class="container">
-    <a class="navbar-brand fw-bold text-primary" href="#">
+    <a class="navbar-brand fw-bold text-primary" routerLink="/home">
       <i class="bi bi-heart-pulse me-2"></i>SaúdePlus
     </a>
     <button
@@ -14,7 +14,9 @@
     <div class="collapse navbar-collapse" id="navbarNav">
       <ul class="navbar-nav ms-auto">
         <li class="nav-item">
-          <a class="nav-link active" href="#">Início</a>
+          <a class="nav-link" routerLink="/home" routerLinkActive="active"
+            >Início</a
+          >
         </li>
         <li class="nav-item">
           <a class="nav-link" href="#">Serviços</a>
@@ -26,7 +28,9 @@
           <a class="nav-link" href="#">Recursos</a>
         </li>
         <li class="nav-item">
-          <a class="btn btn-primary ms-2" href="#">Agendar Consulta</a>
+          <a class="btn btn-primary ms-2" routerLink="/agendar-consulta"
+            >Agendar Consulta</a
+          >
         </li>
       </ul>
     </div>
