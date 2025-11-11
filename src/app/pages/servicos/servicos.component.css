@@ -1,0 +1,51 @@
+.service-card {
+  transition: all 0.3s ease;
+  border: 1px solid transparent;
+  background: white;
+}
+
+.service-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.15) !important;
+  border-color: #e3f2fd;
+}
+
+.btn-outline-primary:hover,
+.btn-outline-success:hover,
+.btn-outline-info:hover,
+.btn-outline-warning:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.card {
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.list-unstyled li {
+  transition: transform 0.2s ease;
+}
+
+.list-unstyled li:hover {
+  transform: translateX(5px);
+}
+
+.bg-primary {
+  background: linear-gradient(135deg, #0d6efd 0%, #0a58ca 100%) !important;
+}
+
+@media (max-width: 768px) {
+  .service-card {
+    margin-bottom: 1.5rem;
+  }
+
+  .d-flex.align-items-start {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .d-flex.align-items-start .rounded-circle {
+    margin-bottom: 1rem;
+    margin-right: 0 !important;
+  }
+}
