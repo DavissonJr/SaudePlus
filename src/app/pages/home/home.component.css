@@ -1,35 +1,204 @@
 .hero-section {
   background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: #fff;
+  position: relative;
+  overflow: hidden;
+  animation: fadeIn 1.2s ease-in-out;
+}
+
+.hero-section::before {
+  content: "";
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: radial-gradient(
+    circle,
+    rgba(255, 255, 255, 0.08) 0%,
+    transparent 70%
+  );
+  animation: floatGlow 10s infinite linear;
+  z-index: 0;
+}
+
+.hero-section .container {
+  position: relative;
+  z-index: 1;
+}
+
+.hero-section h1 {
+  animation: slideInLeft 1s ease;
+}
+
+.hero-section p {
+  animation: slideInLeft 1.3s ease;
+}
+
+.hero-section img {
+  animation: fadeUp 1.5s ease;
+  transition: transform 0.6s ease;
+}
+
+.hero-section img:hover {
+  transform: scale(1.05);
+}
+
+.hero-section .btn {
+  transition: all 0.3s ease;
+  border-radius: 50px;
+}
+
+.hero-section .btn-light:hover {
+  background-color: #f8f9fa;
+  color: #6f42c1;
+  box-shadow: 0 0 20px rgba(255, 255, 255, 0.4);
+}
+
+.hero-section .btn-outline-light:hover {
+  background-color: #fff;
+  color: #6f42c1;
+  transform: scale(1.05);
+}
+
+/* CARDS DE RECURSOS */
+.card-hover {
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
 }
 
 .card-hover:hover {
-  transform: translateY(-5px);
-  transition: transform 0.3s ease;
+  transform: translateY(-10px) scale(1.02);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.12);
 }
 
 .feature-icon {
-  width: 60px;
-  height: 60px;
+  width: 70px;
+  height: 70px;
   border-radius: 50%;
   display: flex;
   align-items: center;
   justify-content: center;
+  transition: all 0.4s ease;
+  font-size: 1.8rem;
 }
 
-.testimonial-card {
-  border-left: 4px solid #0d6efd;
+.card-hover:hover .feature-icon {
+  transform: rotate(10deg) scale(1.1);
+  box-shadow: 0 0 20px rgba(13, 110, 253, 0.2);
+}
+
+/* SEÇÃO DE CARROSSEL */
+.carousel-inner {
+  animation: fadeIn 1s ease;
+}
+
+.carousel-item img {
+  transition: transform 0.6s ease;
+}
+
+.carousel-item img:hover {
+  transform: scale(1.05);
 }
 
 .custom-indicators button {
-  background-color: #6c757d !important;
+  background-color: #adb5bd !important;
   width: 12px !important;
   height: 12px !important;
   border-radius: 50% !important;
-  border: 2px solid transparent !important;
+  border: none !important;
   margin: 0 6px !important;
+  transition: all 0.3s ease;
 }
 
 .custom-indicators .active {
   background-color: #0d6efd !important;
-  border-color: #0d6efd !important;
+  transform: scale(1.3);
+}
+
+/* DEPOIMENTOS */
+.testimonial-card {
+  border-left: 4px solid #0d6efd;
+  transition: all 0.3s ease;
+  animation: fadeUp 1s ease;
+}
+
+.testimonial-card:hover {
+  background-color: rgba(13, 110, 253, 0.05);
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(13, 110, 253, 0.1);
+}
+
+/* ANIMAÇÕES */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideInLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes floatGlow {
+  0% {
+    transform: rotate(0deg) scale(1);
+    opacity: 0.6;
+  }
+  50% {
+    transform: rotate(180deg) scale(1.1);
+    opacity: 0.8;
+  }
+  100% {
+    transform: rotate(360deg) scale(1);
+    opacity: 0.6;
+  }
+}
+
+/* SUAVIZAÇÃO GERAL */
+html {
+  scroll-behavior: smooth;
+}
+
+section {
+  animation: fadeIn 1s ease;
+}
+
+.btn {
+  transition: all 0.3s ease;
+}
+
+.btn:hover {
+  transform: translateY(-3px);
+}
+
+/* RESPONSIVIDADE E TOQUES FINAIS */
+@media (max-width: 768px) {
+  .hero-section {
+    text-align: center;
+  }
+
+  .hero-section img {
+    margin-top: 2rem;
+  }
 }
